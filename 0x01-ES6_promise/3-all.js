@@ -13,4 +13,5 @@ export default async function handleProfileSignup() {
   } catch (e) {
     console.log('Signup system offline');
   }
-  console.log(`${i} ${j} ${k}`);}
+  console.log(`${i} ${j} ${k}`);
+}
