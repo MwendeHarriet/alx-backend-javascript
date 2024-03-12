@@ -1,6 +1,7 @@
-export default function queryAPI(endpoint) {
-   const weakMap = new WeakMap()
-   if (!weakMap.has(endpoint)) {
+const weakMap = new WeakMap();
+
+function queryAPI(endpoint) {
+  if (!weakMap.has(endpoint)) {
     weakMap.set(endpoint, 1);
   } else {
     const count = weakMap.get(endpoint) + 1;
@@ -11,3 +12,5 @@ export default function queryAPI(endpoint) {
     }
   }
 }
+
+export { queryAPI, weakMap };
