@@ -1,6 +1,7 @@
-export default function cleanSet(set, string) {
+export default function cleanSet(set, stri) {
   let x = '';
   for (const i of set) {
-    if (i.startsWith(string)) x += `${i.slice(string.length)}-`;
+    if (i.startsWith(stri)) x += `${i.slice(stri.length)}-`;
   }
   return x.slice(0, -1);
+}
