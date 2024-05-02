@@ -4,21 +4,21 @@ const calculateNumber = require('./0-calcul');
 
 describe('calculateNumber', function() {
     it('should return the sum of rounded numbers', function() {
-        assert.strictEqual(calculateNumber(5, 8), 13);
-        assert.strictEqual(calculateNumber(3, 7.9), 11);
-        assert.strictEqual(calculateNumber(4.2, 9.1), 14);
-        assert.strictEqual(calculateNumber(6.5, 7.3), 14);
+        assert.strictEqual(calculateNumber(1, 3), 4);
+        assert.strictEqual(calculateNumber(1, 3.7), 5);
+        assert.strictEqual(calculateNumber(1.2, 3.7), 5);
+        assert.strictEqual(calculateNumber(1.5, 3.7), 6);
     })
     it('should handle zero values correctly', function() {
-        assert.strictEqual(calculateNumber(0, 6.2), 6);
-        assert.strictEqual(calculateNumber(9.8, 0), 10);
+        assert.strictEqual(calculateNumber(0, 2.1), 2);
+        assert.strictEqual(calculateNumber(8.9, 0), 9);
     })
     it('should handle negative rounded integers', function() {
-        assert.strictEqual(calculateNumber(-5.6, -8.9), -14);
-        assert.strictEqual(calculateNumber(-7.3, -4.1), -11);
+        assert.strictEqual(calculateNumber(-1.6, -3.7), -6);
+        assert.strictEqual(calculateNumber(-7.2, -2.9), -10);
     })
     it('should handle large rounded numbers', function() {
-        assert.strictEqual(calculateNumber(23.6, 38.7), 62);
-        assert.strictEqual(calculateNumber(347.9, 126.4), 474);
+        assert.strictEqual(calculateNumber(21.2, 34.8), 56);
+        assert.strictEqual(calculateNumber(345.7, 123.1), 469);
     })
 })
